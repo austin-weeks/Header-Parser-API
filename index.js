@@ -21,9 +21,7 @@ app.get('/', function (req, res) {
 
 
 app.get("/api/whoami", (req, res) => {
-  console.log(req.ip)
   const headers = req.headers;
-  console.log(headers);
   res.send({
     ipaddress: req.ip,
     language: headers['accept-language'],
